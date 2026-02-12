@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Valentine's Day 💕</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ffd1dc, #ffe6f0);
+            text-align: center;
+            color: #d63384;
+        }
+
+        h1 {
+            margin-top: 80px;
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        .cat-img img {
+            width: 250px;
+            margin-top: 20px;
+        }
+
+        .buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+
+        }
+
+        .yes-btn {
+            padding: 12px 25px;
+            background: #ff4d88;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+
+        .no-btn {
+            
+    padding: 12px 25px;
+    background: #999;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+        
+
+        .yes-btn:hover {
+            background: #ff0066;
+        }
+        .message {
+    margin-top: 40px;
+    font-size: 20px;
+    color: #ff0066;
+    font-weight: 500;
+    min-height: 30px;
+}
+
+    </style>
+</head>
+
+<body>
+
+<h1>Hi My Love 💖</h1>
+
+<h2>
+    I made something special for you… <br>
+    Do you wanna see it? 🥺
+</h2>
+
+<div class="cat-img">
+    <img src="/static/5c49c0ca43b6451a08091ce4cdd0a1ff.gif" alt="Cute Baby Cat">
+</div>
+
+<div class="buttons">
+    <a href="{% url 'story' %}" class="yes-btn">YES 🌸</a>
+    <button id="no-btn" class="no-btn">NO 🥺</button>
+</div>
+
+<p id="angry-text" style="color:#ff0066; font-weight:bold; margin-top:20px;"></p>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const noBtn = document.getElementById("no-btn");
+
+    noBtn.addEventListener("click", function () {
+        document.getElementById("angry-text").innerText =
+            "Ath enthada ninak nokkiya? 😒💕 YES press cheyyeda!";
+    });
+});
+</script>
+
+
+</body>
+</html>
+
