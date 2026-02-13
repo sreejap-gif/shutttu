@@ -49,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # <-- add this
 ]
 
 ROOT_URLCONF = 'projectpro.urls'
@@ -124,6 +126,16 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR/"static"
 ]
+
+
+
+# Folder where Django will collect all static files for production
+STATIC_ROOT = BASE_DIR / 'staticfiles'  
+
+# Optional: local static folder
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL='media/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'media/')

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,12 +27,10 @@
         }
 
         .buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-
-
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         .yes-btn {
@@ -45,29 +44,25 @@
         }
 
         .no-btn {
-            
-    padding: 12px 25px;
-    background: #999;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-        
+            padding: 12px 25px;
+            background: #999;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
 
         .yes-btn:hover {
             background: #ff0066;
         }
         .message {
-    margin-top: 40px;
-    font-size: 20px;
-    color: #ff0066;
-    font-weight: 500;
-    min-height: 30px;
-}
-
+            margin-top: 40px;
+            font-size: 20px;
+            color: #ff0066;
+            font-weight: 500;
+            min-height: 30px;
+        }
     </style>
 </head>
 
@@ -81,7 +76,7 @@
 </h2>
 
 <div class="cat-img">
-    <img src="/static/5c49c0ca43b6451a08091ce4cdd0a1ff.gif" alt="Cute Baby Cat">
+    <img src="{% static '5c49c0ca43b6451a08091ce4cdd0a1ff.gif' %}" alt="Cute Baby Cat">
 </div>
 
 <div class="buttons">
@@ -90,7 +85,6 @@
 </div>
 
 <p id="angry-text" style="color:#ff0066; font-weight:bold; margin-top:20px;"></p>
-
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -103,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-
 </body>
 </html>
+
 
